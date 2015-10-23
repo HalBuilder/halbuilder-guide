@@ -1,0 +1,17 @@
+== Representations vs Resources
+
+NOTE: HAL is all about the representation of REST resources, and not the resources themselves.
+
+[source,json]
+----
+// load from the server?
+----
+
+=== Links and Relationships
+
+NOTE: Resources can be navigated by links, relationships identified by the reasons for which we follow a link...
+
+=== Embedding related resources
+
+NOTE: In addition to merely linking to other resources, the HAL format allows you to actually
+embed a representation of additional resources directly inside the requested representation.

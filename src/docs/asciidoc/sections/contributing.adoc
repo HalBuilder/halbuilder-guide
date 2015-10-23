@@ -1,0 +1,30 @@
+== Contributing to HalBuilder
+
+You can contribute to the HalBuilder project in many ways: discussion on the
+https://groups.google.com/forum/?fromgroups#!forum/halbuilder-dev[Google Group], bug reports, feature requests and pull
+requests on the relevant Github project are also welcone.
+
+Each projects git repository is modeled with the http://nvie.com/posts/a-successful-git-branching-model/[git-flow] branching
+ model, so any pull requests should be against the appropriate `develop` branch.
+
+HalBuilder and its various modules are released under the http://www.apache.org/licenses/LICENSE-2.0.html[Apache V2 license].
+
+=== Building HalBuilder
+
+HalBuilder is distributed via http://search.maven.org/#search|ga|1|halbuilder[Maven Central]
+as a set of http://maven.apache.org[Apache Maven] artifacts.
+
+The source for HalBuilder and its modules can be found as separate repositories in the https://github
+.com/organizations/HalBuilder[HalBuilder Organisation]. Each project is an http://maven.apache.org[Apache Maven]
+based project.
+
+=== HalBuilder Modules
+
+* https://github.com/HalBuilder/halbuilder-test-resources[halbuilder-test-resources]
+* https://github.com/HalBuilder/halbuilder-api[halbuilder-api]
+* https://github.com/HalBuilder/halbuilder-core[halbuilder-core]
+* https://github.com/HalBuilder/halbuilder-json[halbuilder-json]
+* https://github.com/HalBuilder/halbuilder-xml[halbuilder-xml]
+* https://github.com/HalBuilder/halbuilder-standard[halbuilder-standard]
+* https://github.com/HalBuilder/halbuilder-guava[halbuilder-guava]
+

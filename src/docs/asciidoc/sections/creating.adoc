@@ -1,0 +1,24 @@
+== Creating Representations
+
+Creating a HAL based resource representation is a simple process of calling `newRepresentation` from a configured
+`RepresentationFactory`. From here it's a simple matter of using the fluent API to build up your properties, links, and other
+resource related details.
+
+[source,java]
+----
+Representation rep = factory.newRepresentation("/location")
+                            .withProperty("name", "Mark Derricutt")
+                            .withLink("create", "/api/create");
+----
+
+=== Rendering Representations
+
+Once you've defined your representation instance, you can easily generate the JSON or XML textual representation by calling the
+`toString(contentType)` method:
+
+[source,java]
+----
+String json = rep.toString(RepresentationFactory.HAL_JSON);
+----
+
+From here it's just a matter of returning that via whatever web framework you're using.

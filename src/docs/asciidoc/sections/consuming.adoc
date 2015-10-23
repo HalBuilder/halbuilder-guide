@@ -1,0 +1,39 @@
+== Consuming Representations with HalBuilder
+
+Consuming a remote HAL resource representation is as simple as called `readRepresentation` from an
+instance of a `RepresentionFactory`:
+
+[source,java]
+----
+RepresentationFactory representationFactory = new DefaultRepresentationFactory();
+ReadableRepresentation representation = representationFactory.readRepresentation(...);
+----
+
+Halbuilder by design doesn't include any built in support for handling HTTP traffic, instead favoring to
+leave that up to the developer to decide based on requirements and desires ( aka Android or Google App Engine
+specific libraries ) and simply accepts an `InputStream` to the `readRepresentation` method.
+
+From here, using HalBuilder is pretty much the same as it is for constructing representations, albeit in an
+immutable, or read-only fashion.
+
+=== Reading / Following Links
+
+The `ReadableRepresentation` interface provides a simple `getLinkByRel` method to retrieve a
+link from the resource. If the link rel doesn't exist `null` is returned, and if more than one link is
+found an exception will be raised, to retrieve 0-N links use the associated `getLinksbyRel` method.
+
+Using the https://github.com/AsyncHttpClient/async-http-client[AsyncHttpClient] and the sample http://gotohal
+.net/restbucks/api[RESTBucks] API we can do the following:
+
+[source,scala]
+----
+import com.ning.http.client._
+import java.io.InputStreamReader
+
+val client = new AsyncHttpClient()
+val response = client.prepareGet("http://gotohal.net/restbucks/api").execute().get()
+val representation = rf.readRepresentation(new InputStreamReader(response.getResponseBodyAsStream))
+val ordersLinkUrl = representation.getLinkByRel("orders").getHref()
+----
+
+After this code executes, the <code>ordersLinkUrl</code> variable contains:

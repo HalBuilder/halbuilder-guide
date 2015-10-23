@@ -1,0 +1,28 @@
+== Getting Started
+
+Usage of the HalBuilder library starts out with an instance of the
+`RepresentationFactory` class, this is where you can configure default namespaces and standard links to include on all resource
+representations, and of course - create or consume representations.
+
+=== The Representation Factory
+
+[source,java]
+----
+RepresentationFactory representationFactory = new StandardRepresentationFactory();
+----
+
+=== Default Representation URI
+
+The `StandardRepresentionFactory` class is the entry point to HalBuilder, an instance of this
+class can be safely reused and injected into the resource classes used by your REST/web framework.
+
+==== Pretty Printing
+
+By default, all representations are generated in a compact format, but can easily be turned into
+a pretty printed variation by adding the `RepresentationFactory.PRETTY_PRINT` URI to a factories
+flags:
+
+[source,java]
+----
+representationFactory.withFlag(RepresentationFactory.PRETTY_PRINT);
+----
