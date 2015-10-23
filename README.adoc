@@ -1,0 +1,4 @@
+= Halbuider Guide
+
+This repository contains an http://asciidoctor.org/(Asciidoctor) based user guide for the HalBuilder library which is published
+on the http://www.gotohal.net website.
