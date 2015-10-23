@@ -18,11 +18,11 @@ HAL is a bit like HTML for machines, in that it is generic and designed to drive
 ____
 
 The HAL format, and the HalBuilder Java library provide a consistent approach to both designing
-and consuming reusable, and navible REST APIs built on the Java platform.
+and consuming reusable, and navigable REST APIs built on the Java platform.
 
 == Installing HalBuilder
 
-HalBuilder is distributed via Maven Central, and the simplest way to get started is to include the `halbuilder-standard` dependency:
+HalBuilder is distributed via Maven Central, and the simplest way to get started is to include the `halbuilder-standard` dependency in your Maven `pom.xml`:
 
 [source,xml]
 ----
@@ -31,6 +31,13 @@ HalBuilder is distributed via Maven Central, and the simplest way to get started
     <artifactId>halbuilder-standard</artifactId>
     <version>4.0.1</version>
 </dependency>
+----
+
+Or declare it in your `build.gradle` file with:
+
+[source,groovy]
+----
+compile 'com.theoryinpractise:halbuilder-standard:4.0.1'
 ----
 
 include::sections/gettingstarted.adoc[]
