@@ -22,8 +22,8 @@ The `ReadableRepresentation` interface provides a simple `getLinkByRel` method t
 link from the resource. If the link rel doesn't exist `null` is returned, and if more than one link is
 found an exception will be raised, to retrieve 0-N links use the associated `getLinksbyRel` method.
 
-Using the https://github.com/AsyncHttpClient/async-http-client[AsyncHttpClient] and the sample http://gotohal
-.net/restbucks/api[RESTBucks] API we can do the following:
+Using the https://github.com/AsyncHttpClient/async-http-client[AsyncHttpClient] and the sample [RESTBucks](http://gotohal
+.net/restbucks/api) API we can do the following:
 
 [source,scala]
 ----
