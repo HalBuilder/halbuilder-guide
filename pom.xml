@@ -77,7 +77,6 @@
         <resources>
             <resource>
                 <directory>target/generated-docs</directory>
-                <targetPath>guide</targetPath>
                 <includes>
                     <include>**/*</include>
                 </includes>
