@@ -19,6 +19,18 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>io.repaint.maven</groupId>
+                <artifactId>tiles-maven-plugin</artifactId>
+                <version>2.3</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <tiles>
+                        <tile>com.theoryinpractise:halbuilder-release-tile:[1.0.0,2.0.0)</tile>
+                    </tiles>
+                </configuration>
+            </plugin>
+
+            <plugin>
                 <groupId>org.asciidoctor</groupId>
                 <artifactId>asciidoctor-maven-plugin</artifactId>
                 <version>${asciidoctor.maven.plugin.version}</version>
